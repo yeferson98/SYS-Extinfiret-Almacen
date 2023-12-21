@@ -7,6 +7,7 @@ import { routes } from './app.routes';
 import { TemplateModule } from './common/template/template.module';
 import { AppConfig } from './core/services/app.config.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterOutlet,
     RouterModule.forRoot(routes, { useHash: false, enableTracing: false }),
     TemplateModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule
   ],
   bootstrap: [AppComponent],
   providers: [

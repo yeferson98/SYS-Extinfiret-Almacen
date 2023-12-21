@@ -4,7 +4,7 @@ import { AppConfig } from "../services/app.config.service";
 import { catchError, of, retry } from "rxjs";
 
 @Injectable({ providedIn: 'root' })
-export class HttpGpAppWeb {
+export class HttpAppWeb {
   urlBase: String = "";
   constructor(private http: HttpClient) {
     this.urlBase = AppConfig.appSetting.appUris?.backend_api!;
