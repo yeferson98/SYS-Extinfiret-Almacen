@@ -1,1 +1,250 @@
 /* You can add global styles to this file, and also import other style files */
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42a948;
+  /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+  /* red */
+}
+
+.ui-float-label > label {
+  padding-left: 2px;
+}
+
+.layout-wrapper .topbar-items li.profile-item a .topbar-item-name {
+  padding-top: 4px;
+}
+
+body .p-toolbar {
+  padding: 5px 5px;
+}
+
+body .p-field {
+  margin-bottom: 0.2rem;
+}
+
+.card h5 {
+  margin: 2px 0px;
+}
+
+.p-datatable.p-datatable-sm .p-datatable-header {
+  padding: 0px;
+}
+
+.p-tabview .p-tabview-panels {
+  padding: 0.5rem;
+}
+
+.ui-picklist-source-controls > div {
+  display: none !important;
+}
+
+.ui-picklist-target-controls > div {
+  display: none !important;
+}
+
+.table-row-status-inactive {
+  color: #d9534f !important;
+}
+
+.field-label {
+  border: 1px solid #dee2e6;
+  border-width: 0 0 1px 0;
+  background-color: #f9f9f9;
+}
+
+.field-value {
+  border: 1px solid #dee2e6;
+  border-width: 0 0 1px 0;
+}
+
+.status {
+  padding: 2px 3px;
+  border-radius: 4px;
+}
+
+.status.delivery {
+  color: #ffffff;
+  background-color: #5cb85c;
+}
+
+.status.undelivery {
+  color: #ffffff;
+  background-color: #d9534f;
+}
+
+.status.success {
+  color: #ffffff;
+  background-color: #5cb85c;
+}
+
+.status.error {
+  color: #ffffff;
+  background-color: #d9534f;
+}
+
+/*primeng: cortar el texto en una celda*/
+
+.table-cell-word-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Layout Main (content)  */
+
+.layout-main-content {
+  background-color: #ffffff;
+}
+
+.layout-main-content-header {
+  border-bottom: 1px solid #cccccc;
+}
+
+/* Dashboard */
+
+.dashboard-banking .currency-panel {
+  height: 100%;
+}
+
+.dashboard-banking .currency-panel .dashboard-currency {
+  min-height: 85px;
+  padding: 23px 10px;
+  border: 1px solid rgba(67, 69, 96, 0.1);
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.dashboard-banking .currency-panel .dashboard-currency:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.dashboard-banking .currency-panel .dashboard-currency-icon {
+  margin-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.dashboard-banking .currency-panel .dashboard-currency-icon,
+.dashboard-banking .currency-panel .dashboard-currency-label {
+  float: left;
+}
+
+.dashboard-banking .currency-panel .dashboard-currency-rates {
+  float: right;
+}
+
+.dashboard-banking
+  .currency-panel
+  .dashboard-currency-rates
+  .dashboard-currency-rate {
+  float: left;
+  margin-left: 15px;
+  text-align: right;
+}
+
+.dashboard-banking .currency-panel .dashboard-currency-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+}
+
+.dashboard-banking .currency-panel .dashboard-currency-subtitle {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #777777;
+}
+
+.dashboard-banking .currency-panel .currency-rate-title {
+  font-size: 12px;
+  line-height: 20px;
+  display: block;
+  color: #777777;
+}
+
+.dashboard-banking .currency-panel .currency-rate-value {
+  font-weight: 600;
+  line-height: 17px;
+  display: block;
+}
+
+.dashboard-banking .stock-available .ui-panel-content {
+  padding: 0px !important;
+  border: 0px !important;
+}
+
+.dashboard-banking .stock-available .sa {
+  margin-left: 5px;
+  color: #8ad88a;
+}
+
+.dashboard-banking .stock-available .sna {
+  margin-left: 5px;
+  color: #de7470;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.text-overflow{
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto desbordado */
+}
+.contenedor-two{
+  position: relative;
+  width: 100%;
+  height: 83vh;
+}
+.contenedor {
+  position: relative;
+  width: 100%;
+  height: 83vh; /* Altura de ejemplo para permitir el scroll */
+  overflow-y: auto;
+}
+.contenedor::-webkit-scrollbar {
+  width: 5px; /* Ancho del scrollbar vertical */
+  height: 20px;
+}
+.contenedor::-webkit-scrollbar-thumb {
+  background-color: #efefef; /* Color del thumb */
+  border-radius: 6px; /* Bordes redondeados del thumb */
+}
+.contenedor::-webkit-scrollbar-track {
+  border-radius: 10px; /* Color del track */
+}
+.contenedor::-webkit-scrollbar-thumb:hover{
+  background:var(--primary-500);
+}
+#Content-Prices{
+  display: block;
+  height: 20%;
+}
+.div-flotante {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  display: none;
+  z-index: 200;
+}
+@media screen and (max-width: 763px) {
+  #Content-Prices{
+    display: none;
+  }
+  .div-flotante {
+    display: block;
+    background: white;
+    height: 70px;
+    width: 100%;
+  }
+}

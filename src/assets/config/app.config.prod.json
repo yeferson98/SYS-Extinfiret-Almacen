@@ -1,0 +1,5 @@
+{
+  "appUris": {
+    "backend_api": "https://localhost:7298/api/"
+  }
+}
