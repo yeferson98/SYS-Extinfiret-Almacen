@@ -4,11 +4,33 @@ import { MessageDetail, ResponseController } from "../../../../common/models/com
 import { ResponseTokenDto } from "../../infrastructure/dto/responseToken";
 import { isNullOrUndefined } from "../../../../common/functions/common.functions";
 import { UserLogin } from "../../../../common/models/user-login";
+import { ApplicationByUserDto } from "../../infrastructure/dto/applicationByUser";
 
 
 @Injectable({ providedIn: 'root' })
 export class AuthController {
   constructor(private repository: AuthRepository) {
+  }
+
+  getApplicationByUserId(idUser: number) {
+    return new Promise<ResponseController<ApplicationByUserDto[]>>((response) => {
+      let controller: ResponseController<ApplicationByUserDto[]>;
+      let msg: MessageDetail = {};
+      this.repository.getApplicationByUserId(idUser).subscribe(result => {
+        if (isNullOrUndefined(result)) {
+          msg = { severity: 'info', summary: 'Error interno del servidor', detail: '' };
+          controller = { messageAlert: msg, error: true, event: false };
+        } else {
+          if (!result?.isSuccessful) {
+            msg = { severity: 'error', summary: 'Error', detail: result?.message, };
+            controller = { messageAlert: msg, error: true, event: false, help: result?.result };
+          } else {
+            controller = { body: result.data ?? [], error: false, event: false };
+          }
+        }
+        return response(controller);
+      });
+    });
   }
 
   login(model: UserLogin) {

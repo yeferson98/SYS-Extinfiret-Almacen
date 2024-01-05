@@ -8,7 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpAppWeb } from './http/http-backend';
 import { AuthController } from './auth/domain/controllers/auth-controller';
 import { AuthRepository } from './auth/infrastructure/repository/auth-repository';
-
+import { DropdownModule } from 'primeng/dropdown';
+import { AuthService } from './auth/services/auth.service';
 @NgModule({
   declarations: [
     LoginComponent
@@ -20,11 +21,13 @@ import { AuthRepository } from './auth/infrastructure/repository/auth-repository
     InputTextModule,
     ReactiveFormsModule,
     FormsModule,
+    DropdownModule
   ],
   providers:[
     HttpAppWeb,
     AuthController,
-    AuthRepository
+    AuthRepository,
+    AuthService
   ]
 })
 export class CoreModule { }

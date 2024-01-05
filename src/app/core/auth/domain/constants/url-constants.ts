@@ -1,3 +1,4 @@
 export const AuthApi = {
-  login: 'Managment/Login'
+  login: 'Managment/Login',
+  getAplicationByUser: 'Managment/GetAplicationByUser'
 }

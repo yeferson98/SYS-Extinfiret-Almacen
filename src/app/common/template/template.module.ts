@@ -11,6 +11,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
 import { StyleClassModule } from 'primeng/styleclass';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuServiceApp } from './service/menu.service';
 
 
 
@@ -31,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TooltipModule,
     StyleClassModule,
     BrowserAnimationsModule
-  ]
+  ],
+  providers:[MenuServiceApp]
 })
 export class TemplateModule { }
